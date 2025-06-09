@@ -1,60 +1,177 @@
-# News-Platform
-This layout provides a structured and visually appealing news platform, making it easy for users to navigate and find relevant stories
+// Simple demo data for articles and authors
+const newsArticles = [
+  {
+    title: "Kenya’s Tech Startups Raise Record Funding in 2025",
+    category: "tech",
+    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+    author: "Mary Njenga",
+    authorImg: "https://randomuser.me/api/portraits/women/50.jpg",
+    date: "2025-06-06",
+    excerpt: "Kenya’s tech startups secured over $500 million in funding, signaling a new era for innovation in East Africa.",
+    featured: true,
+  },
+  {
+    title: "Nairobi Stock Exchange Sees Historic Growth",
+    category: "business",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+    author: "James Maina",
+    authorImg: "https://randomuser.me/api/portraits/men/32.jpg",
+    date: "2025-06-05",
+    excerpt: "The NSE hit record highs this quarter, led by banking and tech sector gains.",
+    featured: false,
+  },
+  {
+    title: "Government Announces New Tech Tax Policy",
+    category: "politics",
+    image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80",
+    author: "Lucy Wambui",
+    authorImg: "https://randomuser.me/api/portraits/women/65.jpg",
+    date: "2025-06-03",
+    excerpt: "A new tax bill targeting digital services will impact both startups and consumers.",
+    featured: true,
+  },
+  {
+    title: "Digital Banking Revolutionizes Rural Kenya",
+    category: "business",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80",
+    author: "Samuel Kiptoo",
+    authorImg: "https://randomuser.me/api/portraits/men/75.jpg",
+    date: "2025-06-02",
+    excerpt: "Mobile banking is bringing financial services to millions in rural areas.",
+    featured: false,
+  },
+  {
+    title: "AI-Powered Journalism: The Future is Now",
+    category: "tech",
+    image: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=600&q=80",
+    author: "Mary Njenga",
+    authorImg: "https://randomuser.me/api/portraits/women/50.jpg",
+    date: "2025-06-01",
+    excerpt: "Newsrooms are adopting AI to speed up reporting and fact-checking.",
+    featured: true,
+  },
+];
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=1152, initial-scale=1.0">
-  <title>NEWS Platform</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Google Fonts for modern look -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header>
-    <div class="logo">
-      <span style="font-size:1.7rem;vertical-align:middle;">
-        <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="3" fill="#fff"/><rect x="4" y="9" width="16" height="2" rx="1" fill="#222"/><rect x="4" y="13" width="10" height="2" rx="1" fill="#222"/></svg>
-      </span>
-      NEWS
+// Author data
+const authors = [
+  {
+    name: "Mary Njenga",
+    img: "https://randomuser.me/api/portraits/women/50.jpg",
+    role: "Senior Tech Journalist",
+    bio: "Covers African startups, innovation, and digital trends.",
+  },
+  {
+    name: "James Maina",
+    img: "https://randomuser.me/api/portraits/men/32.jpg",
+    role: "Business Correspondent",
+    bio: "Specializes in finance, stocks, and the Kenyan economy.",
+  },
+  {
+    name: "Lucy Wambui",
+    img: "https://randomuser.me/api/portraits/women/65.jpg",
+    role: "Political Analyst",
+    bio: "Focus on policy, government, and regulation.",
+  },
+  {
+    name: "Samuel Kiptoo",
+    img: "https://randomuser.me/api/portraits/men/75.jpg",
+    role: "Field Reporter",
+    bio: "Brings rural and grassroots stories to the forefront.",
+  },
+];
+
+// Populate Latest News
+function renderLatestNews() {
+  const latestNews = document.getElementById('latest-news');
+  latestNews.innerHTML = newsArticles
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 4)
+    .map(article => newsCard(article))
+    .join('');
+}
+
+// Populate Featured Stories
+function renderFeaturedStories() {
+  const featured = newsArticles.filter(a => a.featured);
+  const featuredDiv = document.getElementById('featured-stories');
+  featuredDiv.innerHTML = featured.map(article => featuredCard(article)).join('');
+}
+
+// Populate Category News
+function renderCategoryNews(category = "all") {
+  const categoryNews = document.getElementById('category-news');
+  let filtered = newsArticles;
+  if (category !== "all") {
+    filtered = filtered.filter(a => a.category === category);
+  }
+  categoryNews.innerHTML = filtered.map(article => newsCard(article)).join('');
+}
+
+// Render Author Profiles
+function renderAuthors() {
+  const authorDiv = document.getElementById('author-profiles');
+  authorDiv.innerHTML = authors.map(author => `
+    <div class="author-card">
+      <img src="${author.img}" alt="${author.name}" />
+      <h4>${author.name}</h4>
+      <div class="role">${author.role}</div>
+      <p>${author.bio}</p>
     </div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">World</a>
-      <a href="#">Business</a>
-      <a href="#">Politics</a>
-      <a href="#">About</a>
-    </nav>
-  </header>
+  `).join('');
+}
 
-  <main>
-    <section class="main-content">
-      <!-- Latest News -->
-      <h2 class="section-title">Latest News</h2>
-      <div class="latest-news">
-        <div class="news-card">
-          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Tech Industry" class="news-thumb">
-          <div class="news-title">Tech Industry Continues to Expand Rapidly</div>
-          <div class="news-date">April 23, 2024</div>
-        </div>
-        <div class="news-card">
-          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Market Watch" class="news-thumb">
-          <div class="news-title">Market Watch: Stocks Jump as Trading Begins</div>
-          <div class="news-date">April 23, 2024</div>
-        </div>
-        <div class="news-card">
-          <img src="https://images.unsplash.com/photo-1522204502583-9b7be463c6e6?auto=format&fit=crop&w=400&q=80" alt="President Speech" class="news-thumb">
-          <div class="news-title">President Addresses Rising Tensions in Speech</div>
-          <div class="news-date">April 23, 2024</div>
-        </div>
-        <div class="news-card">
-          <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80" alt="Remote Work Study" class="news-thumb">
-          <div class="news-title">New Study Reveals Trends in Remots Work</div>
-          <div class="news-date">April 23, 2024</div>
-        </div>
-      </div>
-  </main>
-</body>
-</html>
+// News Card Template
+function newsCard(article) {
+  return `
+    <div class="news-card" tabindex="0">
+      <img src="${article.image}" alt="${article.title}">
+      <h3>${article.title}</h3>
+      <div class="meta">By ${article.author} • ${article.date}</div>
+      <div class="excerpt">${article.excerpt}</div>
+    </div>
+  `;
+}
+
+// Featured Card Template
+function featuredCard(article) {
+  return `
+    <div class="featured-card">
+      <img src="${article.image}" alt="${article.title}">
+      <h3>${article.title}</h3>
+      <div class="meta">By ${article.author} • ${article.date}</div>
+      <div class="excerpt">${article.excerpt}</div>
+    </div>
+  `;
+}
+
+// Category Filter Events
+document.addEventListener('DOMContentLoaded', () => {
+  renderLatestNews();
+  renderFeaturedStories();
+  renderCategoryNews();
+  renderAuthors();
+
+  // Category Filter
+  document.querySelectorAll('.cat-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      renderCategoryNews(this.dataset.category);
+    });
+  });
+
+  // Dark Mode Toggle
+  const darkBtn = document.getElementById('toggle-dark');
+  darkBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    darkBtn.innerHTML = document.body.classList.contains('dark')
+      ? '<i class="fa fa-sun"></i>' : '<i class="fa fa-moon"></i>';
+  });
+
+  // Contact Form (Fake Submission)
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you for contacting us!');
+    this.reset();
+  });
+});
