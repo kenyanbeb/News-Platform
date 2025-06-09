@@ -1,2 +1,60 @@
 # News-Platform
 This layout provides a structured and visually appealing news platform, making it easy for users to navigate and find relevant stories
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1152, initial-scale=1.0">
+  <title>NEWS Platform</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts for modern look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <span style="font-size:1.7rem;vertical-align:middle;">
+        <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="3" fill="#fff"/><rect x="4" y="9" width="16" height="2" rx="1" fill="#222"/><rect x="4" y="13" width="10" height="2" rx="1" fill="#222"/></svg>
+      </span>
+      NEWS
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">World</a>
+      <a href="#">Business</a>
+      <a href="#">Politics</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="main-content">
+      <!-- Latest News -->
+      <h2 class="section-title">Latest News</h2>
+      <div class="latest-news">
+        <div class="news-card">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Tech Industry" class="news-thumb">
+          <div class="news-title">Tech Industry Continues to Expand Rapidly</div>
+          <div class="news-date">April 23, 2024</div>
+        </div>
+        <div class="news-card">
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Market Watch" class="news-thumb">
+          <div class="news-title">Market Watch: Stocks Jump as Trading Begins</div>
+          <div class="news-date">April 23, 2024</div>
+        </div>
+        <div class="news-card">
+          <img src="https://images.unsplash.com/photo-1522204502583-9b7be463c6e6?auto=format&fit=crop&w=400&q=80" alt="President Speech" class="news-thumb">
+          <div class="news-title">President Addresses Rising Tensions in Speech</div>
+          <div class="news-date">April 23, 2024</div>
+        </div>
+        <div class="news-card">
+          <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80" alt="Remote Work Study" class="news-thumb">
+          <div class="news-title">New Study Reveals Trends in Remots Work</div>
+          <div class="news-date">April 23, 2024</div>
+        </div>
+      </div>
+  </main>
+</body>
+</html>
