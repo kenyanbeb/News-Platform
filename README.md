@@ -110,33 +110,25 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </body>
 </html>
-### 🚀 Steps to Create Your Own Website
-1. **Fork the Repository**  
-   Click below to fork the repo and start customizing your own website!  
-   [![FORK REPO](https://img.shields.io/badge/FORK-REPO-blue?style=for-the-badge&logo=github)](https://github.com/jtechde/jamestech-new-web-for_beginners/fork)
 
-2. **Edit `index.html`**  
-   Modify the HTML file to personalize your portfolio.  
-
-3. **Deploy Your Website**  
+**Deploy Your Website**  
    Click below to deploy your site for free on Vercel!  
    [![DEPLOY WEBSITE](https://img.shields.io/badge/DEPLOY-FREE-red?style=for-the-badge&logo=vercel)](https://vercel.com)
 
 ---
 
-### 🎵 Listen to Don Williams
+ 🎵 Listen to Don Williams
 Click below to enjoy Don Williams' music while browsing!  
 [![Play Music](https://img.shields.io/badge/🎵-Play%20Music-green?style=for-the-badge)](https://youtu.be/lC5-cNm7HFw)
 
 ---
-
-### 🌙 Toggle Dark Mode
+ 🌙 Toggle Dark Mode
 Want a different look? Click below to switch themes!  
 [![Dark Mode](https://img.shields.io/badge/🌙-Dark%20Mode-black?style=for-the-badge)](#)
 
 ---
 
-### 🔥 Stay Connected
+🔥 Stay Connected
 - **Join Me on WhatsApp**  
   [![WhatsApp](https://img.shields.io/badge/WhatsApp-Chat-green?style=for-the-badge&logo=whatsapp)](https://wa.me/254111204968)
   
