@@ -1,177 +1,148 @@
-// Simple demo data for articles and authors
-const newsArticles = [
-  {
-    title: "Kenya’s Tech Startups Raise Record Funding in 2025",
-    category: "tech",
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
-    author: "Mary Njenga",
-    authorImg: "https://randomuser.me/api/portraits/women/50.jpg",
-    date: "2025-06-06",
-    excerpt: "Kenya’s tech startups secured over $500 million in funding, signaling a new era for innovation in East Africa.",
-    featured: true,
-  },
-  {
-    title: "Nairobi Stock Exchange Sees Historic Growth",
-    category: "business",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
-    author: "James Maina",
-    authorImg: "https://randomuser.me/api/portraits/men/32.jpg",
-    date: "2025-06-05",
-    excerpt: "The NSE hit record highs this quarter, led by banking and tech sector gains.",
-    featured: false,
-  },
-  {
-    title: "Government Announces New Tech Tax Policy",
-    category: "politics",
-    image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80",
-    author: "Lucy Wambui",
-    authorImg: "https://randomuser.me/api/portraits/women/65.jpg",
-    date: "2025-06-03",
-    excerpt: "A new tax bill targeting digital services will impact both startups and consumers.",
-    featured: true,
-  },
-  {
-    title: "Digital Banking Revolutionizes Rural Kenya",
-    category: "business",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80",
-    author: "Samuel Kiptoo",
-    authorImg: "https://randomuser.me/api/portraits/men/75.jpg",
-    date: "2025-06-02",
-    excerpt: "Mobile banking is bringing financial services to millions in rural areas.",
-    featured: false,
-  },
-  {
-    title: "AI-Powered Journalism: The Future is Now",
-    category: "tech",
-    image: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=600&q=80",
-    author: "Mary Njenga",
-    authorImg: "https://randomuser.me/api/portraits/women/50.jpg",
-    date: "2025-06-01",
-    excerpt: "Newsrooms are adopting AI to speed up reporting and fact-checking.",
-    featured: true,
-  },
-];
+#   ༄[ˢᵘᵖʳᵉᵐᵉ ᴸᵒʳᵈ✪]
+╰►☀Cypronking☀⊷◇ 
+●▅▆𓆩𓆪RON-TEC𓆩𓆪▆▅●.
+ ☠ Ghost Bot On 💀
+## 🌟WELCOME TO CYPRONKING TECH PORTFOLIO🌟
 
-// Author data
-const authors = [
-  {
-    name: "Mary Njenga",
-    img: "https://randomuser.me/api/portraits/women/50.jpg",
-    role: "Senior Tech Journalist",
-    bio: "Covers African startups, innovation, and digital trends.",
-  },
-  {
-    name: "James Maina",
-    img: "https://randomuser.me/api/portraits/men/32.jpg",
-    role: "Business Correspondent",
-    bio: "Specializes in finance, stocks, and the Kenyan economy.",
-  },
-  {
-    name: "Lucy Wambui",
-    img: "https://randomuser.me/api/portraits/women/65.jpg",
-    role: "Political Analyst",
-    bio: "Focus on policy, government, and regulation.",
-  },
-  {
-    name: "Samuel Kiptoo",
-    img: "https://randomuser.me/api/portraits/men/75.jpg",
-    role: "Field Reporter",
-    bio: "Brings rural and grassroots stories to the forefront.",
-  },
-];
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&size=30&pause=1000&color=red&center=true&vCenter=true&width=815&height=60&lines=🩸⃟+✚+✚+✚+✚+✚+✚+✚+✚+✚+✚+✜+✜+✚+✚+✚+✚)](https://git.io/typing-svg) 
 
-// Populate Latest News
-function renderLatestNews() {
-  const latestNews = document.getElementById('latest-news');
-  latestNews.innerHTML = newsArticles
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .slice(0, 4)
-    .map(article => newsCard(article))
-    .join('');
-}
+<p align="center">
+<img src="https://files.catbox.moe/gl24xq.png" width="900" height="400" />
+</p>
 
-// Populate Featured Stories
-function renderFeaturedStories() {
-  const featured = newsArticles.filter(a => a.featured);
-  const featuredDiv = document.getElementById('featured-stories');
-  featuredDiv.innerHTML = featured.map(article => featuredCard(article)).join('');
-}
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&size=30&pause=1000&color=red&center=true&vCenter=true&width=815&height=60&lines=RON-TECH🩸⃟༑༑+𝗪𝗘𝗕🩸⃟༑༑+𝗖𝗥𝗘𝗔𝗧𝗘𝗗+𝗕𝗬+🩸⃟༑༑CYPRONKING)](https://git.io/typing-svg) 
 
-// Populate Category News
-function renderCategoryNews(category = "all") {
-  const categoryNews = document.getElementById('category-news');
-  let filtered = newsArticles;
-  if (category !== "all") {
-    filtered = filtered.filter(a => a.category === category);
-  }
-  categoryNews.innerHTML = filtered.map(article => newsCard(article)).join('');
-}
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  
+  <meta name="description" content="A modern news platform featuring the latest headlines and in-depth stories." />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="main-wrapper">
+    <aside class="sidebar">
+      <div class="logo-row">
+        <span class="logo-icon"><i class="fa fa-newspaper"></i></span>
+        <span class="logo-title">NEWS</span>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#">Home</a>
+        <a href="#">World</a>
+        <a href="#">Business</a>
+        <a href="#">Politics</a>
+        <a href="#">About</a>
+      </nav>
+      <div class="sidebar-categories">
+        <h3>Categories</h3>
+        <ul>
+          <li>Tech</li>
+          <li>Business</li>
+          <li>Politics</li>
+        </ul>
+      </div>
+      <div class="sidebar-authors">
+        <h3>Authors</h3>
+        <div class="author">
+          <img src="https://randomuser.me/api/portraits/women/50.jpg" alt="Jane Smith" />
+          <div>
+            <span class="author-name">Jane Smith</span>
+            <span class="author-role">Senior Writer</span>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar-contact">
+        <h3>Contact</h3>
+      </div>
+    </aside>
+    <main class="content">
+      <section class="latest-news">
+        <h2>Latest News</h2>
+        <div class="news-list">
+          <div class="news-item">
+            <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80" alt="Tech Industry Continues to Expand Rapidly" />
+            <div class="news-info">
+              <h4>Tech Industry Continues to Expand Rapidly</h4>
+              <span class="news-date">April 23, 2024</span>
+            </div>
+          </div>
+          <div class="news-item">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Market Watch: Stocks Jump as Trading Begins" />
+            <div class="news-info">
+              <h4>Market Watch: Stocks Jump as Trading Begins</h4>
+              <span class="news-date">April 23, 2024</span>
+            </div>
+          </div>
+          <div class="news-item">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="President Addresses Rising Tensions in Speech" />
+            <div class="news-info">
+              <h4>President Addresses Rising Tensions in Speech</h4>
+              <span class="news-date">April 23, 2024</span>
+            </div>
+          </div>
+          <div class="news-item">
+            <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80" alt="New Study Reveals Trends in Remote Work" />
+            <div class="news-info">
+              <h4>New Study Reveals Trends in Remote Work</h4>
+              <span class="news-date">April 23, 2024</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="featured-story">
+        <h2>Featured Stories</h2>
+        <div class="featured-card">
+          <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a06b3?auto=format&fit=crop&w=800&q=80" alt="The Future of Work" class="featured-img" />
+          <div class="featured-text">
+            <h3>The Future of Work: Changes and Challenges Ahead</h3>
+            <p>
+              The workplace is undergoing rapid transformation. Shifts in work practices and expectations pose both opportunities and challenges for employees and employers.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</body>
+</html>
+### 🚀 Steps to Create Your Own Website
+1. **Fork the Repository**  
+   Click below to fork the repo and start customizing your own website!  
+   [![FORK REPO](https://img.shields.io/badge/FORK-REPO-blue?style=for-the-badge&logo=github)](https://github.com/jtechde/jamestech-new-web-for_beginners/fork)
 
-// Render Author Profiles
-function renderAuthors() {
-  const authorDiv = document.getElementById('author-profiles');
-  authorDiv.innerHTML = authors.map(author => `
-    <div class="author-card">
-      <img src="${author.img}" alt="${author.name}" />
-      <h4>${author.name}</h4>
-      <div class="role">${author.role}</div>
-      <p>${author.bio}</p>
-    </div>
-  `).join('');
-}
+2. **Edit `index.html`**  
+   Modify the HTML file to personalize your portfolio.  
 
-// News Card Template
-function newsCard(article) {
-  return `
-    <div class="news-card" tabindex="0">
-      <img src="${article.image}" alt="${article.title}">
-      <h3>${article.title}</h3>
-      <div class="meta">By ${article.author} • ${article.date}</div>
-      <div class="excerpt">${article.excerpt}</div>
-    </div>
-  `;
-}
+3. **Deploy Your Website**  
+   Click below to deploy your site for free on Vercel!  
+   [![DEPLOY WEBSITE](https://img.shields.io/badge/DEPLOY-FREE-red?style=for-the-badge&logo=vercel)](https://vercel.com)
 
-// Featured Card Template
-function featuredCard(article) {
-  return `
-    <div class="featured-card">
-      <img src="${article.image}" alt="${article.title}">
-      <h3>${article.title}</h3>
-      <div class="meta">By ${article.author} • ${article.date}</div>
-      <div class="excerpt">${article.excerpt}</div>
-    </div>
-  `;
-}
+---
 
-// Category Filter Events
-document.addEventListener('DOMContentLoaded', () => {
-  renderLatestNews();
-  renderFeaturedStories();
-  renderCategoryNews();
-  renderAuthors();
+### 🎵 Listen to Don Williams
+Click below to enjoy Don Williams' music while browsing!  
+[![Play Music](https://img.shields.io/badge/🎵-Play%20Music-green?style=for-the-badge)](https://youtu.be/lC5-cNm7HFw)
 
-  // Category Filter
-  document.querySelectorAll('.cat-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-      renderCategoryNews(this.dataset.category);
-    });
-  });
+---
 
-  // Dark Mode Toggle
-  const darkBtn = document.getElementById('toggle-dark');
-  darkBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    darkBtn.innerHTML = document.body.classList.contains('dark')
-      ? '<i class="fa fa-sun"></i>' : '<i class="fa fa-moon"></i>';
-  });
+### 🌙 Toggle Dark Mode
+Want a different look? Click below to switch themes!  
+[![Dark Mode](https://img.shields.io/badge/🌙-Dark%20Mode-black?style=for-the-badge)](#)
 
-  // Contact Form (Fake Submission)
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Thank you for contacting us!');
-    this.reset();
-  });
-});
+---
+
+### 🔥 Stay Connected
+- **Join Me on WhatsApp**  
+  [![WhatsApp](https://img.shields.io/badge/WhatsApp-Chat-green?style=for-the-badge&logo=whatsapp)](https://wa.me/254111204968)
+  
+- **Follow Me on Facebook**  
+  [![Facebook](https://img.shields.io/badge/Facebook-Profile-blue?style=for-the-badge&logo=facebook)](https://www.facebook.com/profile.php?id=100095314996312)
+
+- **Follow Me on GitHub**  
+  [![GitHub](https://img.shields.io/badge/GitHub-Cypronking-black?style=for-the-badge&logo=github)](https://github.com/kenyanbeb)
+
